@@ -1,7 +1,7 @@
 <template>
   <div>
     <TodoCard
-      v-for="todo in todosStore.currentTodos"
+      v-for="todo in todosStore.sortedTodos"
       :todo="todo"
       :key="todo.id"
       @delete-todo="todosStore.deleteTodo($event)"

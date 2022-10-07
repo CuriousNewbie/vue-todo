@@ -18,8 +18,20 @@ const route = useRoute();
       <input type="checkbox" v-model="todosStore.settings.showFinished" /> Show
       finished |
       <input type="checkbox" v-model="todosStore.settings.showUnfinished" />
-      Show unfinished
+      Show pending
+
+      <br />
+      Select sorting order:
+      <select
+        name="sortingPriority"
+        v-model="todosStore.settings.sortingPriority"
+      >
+        <option value="default">Show unsorted</option>
+        <option value="high">Show high priority first</option>
+        <option value="low">Show low priority first</option>
+      </select>
     </div>
+
     <hr />
     <RouterView />
   </div>

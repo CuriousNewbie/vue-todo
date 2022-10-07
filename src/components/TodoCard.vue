@@ -2,6 +2,7 @@
   <div class="card">
     <input type="checkbox" v-model="finished" @change="finishTodo" />
     <div class="card-title">{{ props.todo.title }}</div>
+    <div>Priority: {{ props.todo.priority }}</div>
     <span @click="deleteTodo" class="delete-item">&times;</span>
   </div>
 </template>
@@ -29,8 +30,11 @@ const finishTodo = () => {
   align-items: center;
   border: 2px black solid;
   border-radius: 5px;
-  margin: 0.25rem;
+  margin: 0.5rem;
+  box-shadow: 4px 4px 3px gray;
+  background-color: ;
 }
+
 .card-title {
   padding: 0.25rem;
 }
